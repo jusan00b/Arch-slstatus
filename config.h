@@ -66,13 +66,13 @@ static const char unknown_str[] = "-";
 static const struct arg args[] = {
 	/* function format          argument */
 	{ netspeed_rx, "  %sB/s ",  "wlp2s0" },
-	{ netspeed_rx, "  %sB/s |",  "wlp2s0" },
+	{ netspeed_tx, "  %sB/s |",  "wlp2s0" },
 	{ cpu_perc, "   %s% |",    NULL },
 	{ ram_perc, "   %s% |",    NULL },
 	{ disk_free, "   %sB |",  "/home" },
-	{ run_command, " 󰕾 %s% |",    "amixer sget S/PDIF | awk -F\"[][]\" '/%/ { print s2 }' | head -n1" },
+	{ alsa_master_vol, " 󰕾 %s |",    NULL },
 	{ battery_state, " %s ",   "BAT0" },
-	{ battery_perc, "   %s% |", "BAT0" },
+	{ battery_perc, "%s% |", "BAT0" },
 	{ datetime, " %s |",          "%a %b %d %T" },
 	{ wifi_essid, " 󰢾 %s ",       "wlp2s0" },
 };
